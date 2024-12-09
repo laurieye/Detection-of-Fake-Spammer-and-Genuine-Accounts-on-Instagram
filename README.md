@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 You can also clone this repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/Instagram-Fake-Account-Detection.git
+gh repo clone laurieye/Detection-of-Fake-Spammer-and-Genuine-Accounts-on-Instagram
 ```
 
 ## Dataset
