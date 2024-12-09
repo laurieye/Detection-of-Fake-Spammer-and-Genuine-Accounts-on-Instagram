@@ -36,7 +36,7 @@ The data is divided into 50% fake and 50% real accounts, providing a balanced da
 ## Modeling
 We implement and test the following models:
 
-- **Regression-based Methods:Logistic Regression** (baseline)
+- **Regression-based Methods: Logistic Regression** (baseline)
 - **Tree-based Methods: Decision Tree and Random Forest** (with Grid Search for hyperparameter tuning)
 - **Boosting-based Methods: Gradient Boosting and XGBoost** (with Random Search for hyperparameter tuning)
 - **Advanced Non-linear Methods: SVM and Sequential Neural Network** (designed for complex data patterns)
