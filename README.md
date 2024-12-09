@@ -36,10 +36,10 @@ The data is divided into 50% fake and 50% real accounts, providing a balanced da
 ## Modeling
 We implement and test the following models:
 
-- **Regression-based Methods: Logistic Regression** (baseline)
-- **Tree-based Methods: Decision Tree and Random Forest** (with Grid Search for hyperparameter tuning)
-- **Boosting-based Methods: Gradient Boosting and XGBoost** (with Random Search for hyperparameter tuning)
-- **Advanced Non-linear Methods: SVM and Sequential Neural Network** (designed for complex data patterns)
+- **Regression-based Models: Logistic Regression** (baseline)
+- **Tree-based Models: Decision Tree and Random Forest** (with Grid Search for hyperparameter tuning)
+- **Boosting-based Models: Gradient Boosting and XGBoost** (with Random Search for hyperparameter tuning)
+- **Advanced Non-linear Models: SVM and Sequential Neural Network** (designed for complex data patterns)
 
 ### Key Techniques:
 - **Feature Engineering**: Focused on features such as followers count, posts count, and username length.
