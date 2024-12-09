@@ -55,8 +55,8 @@ The models are evaluated using the following metrics:
 
 Additionally, **Bootstrapping** is used to evaluate the model’s stability and generalization across different subsets of the data.
 
-## Results
-- **Best Model**: Random Forest demonstrated superior interpretability and feature importance while maintaining competitive performance in terms of accuracy and precision.
+## Results: Best Models
+- **Random Forest**:  demonstrated superior interpretability and feature importance while maintaining competitive performance in terms of accuracy and precision.
 - **XGBoost**: Achieved the highest accuracy but did not provide as clear feature insights as Random Forest.
 - **Sequential Neural Network**: Performed well in capturing non-linear patterns but showed slightly lower accuracy compared to Random Forest and XGBoost.
 
