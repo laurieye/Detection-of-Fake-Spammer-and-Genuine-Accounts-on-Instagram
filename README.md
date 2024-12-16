@@ -65,6 +65,7 @@ The models are evaluated using the following metrics:
 Additionally, **Bootstrapping** is used to evaluate the model’s stability and generalization across different subsets of the data.
 
 ## Results
+![best model](best_model.png)
 
 ### Main Results 
 - **Random Forest**: Achieved an accuracy of 92.5%, providing a strong balance between accuracy and interpretability. The model demonstrated superior feature importance (shown in the plot in Google Colab), helping to understand which features were most influential in classifying accounts as fake or genuine. The confusion matrix revealed 4 false positives and 6 false negatives, suggesting accurate predictions in distinguishing between fake and real accounts.
