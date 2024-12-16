@@ -67,33 +67,25 @@ Additionally, **Bootstrapping** is used to evaluate the model’s stability and 
 ## Results
 
 ### Main Results 
-- **Random Forest**: Followed closely with an accuracy of 92.5%, offering superior interpretability with clear feature importance (see the plot in google colab) .demonstrated superior interpretability and feature importance while maintaining competitive performance in terms of accuracy and precision.
-- **XGBoost**: Achieved the highest accuracy of 94% but did not provide as clear feature insights as Random Forest.
-- **Sequential Neural Network**: Performed well in capturing non-linear patterns but showed slightly lower accuracy compared to Random Forest and XGBoost, with an accuracy of 89%.
-- **Logistic Regression**: Performed at 92% accuracy, offering useful insights but lagging behind in precision and ROC-AUC performance compared to other models.
+- **Random Forest**: Achieved an accuracy of 92.5%, providing a strong balance between accuracy and interpretability. The model demonstrated superior feature importance (shown in the plot in Google Colab), helping to understand which features were most influential in classifying accounts as fake or genuine. The confusion matrix revealed 4 false positives and 6 false negatives, suggesting accurate predictions in distinguishing between fake and real accounts.
+- **XGBoost**: Achieved the highest accuracy at 94%, demonstrating superior performance in terms of overall accuracy. However, it did not offer as clear feature importance insights as Random Forest, which makes it less interpretable. 
+- **Sequential Neural Network**: Showed promising results in capturing non-linear patterns, but underperformed compared to Random Forest and XGBoost, with an accuracy of 89%. Despite this, it performed well in model learning, with minimal overfitting, as evidenced by the training and validation loss curves, which remained close throughout the training process.
+- **Logistic Regression**:  Performed at 92% accuracy, providing useful insights for baseline comparison. However, it lagged behind the other models in precision and ROC-AUC. Its simplicity made it a solid foundation for understanding the problem, but more complex models like Random Forest and XGBoost provided better results.
 ### Model Comparison in Detail
-- The Random Forest model showed a strong balance between accuracy and interpretability. The confusion matrix revealed 4 false positives and 6 false negatives, suggesting accurate predictions for distinguishing fake from real accounts.
-- Bootstrapping results: accuracy ranged from 91%-92%, with a low standard deviation of 1.36%, indicating the model's stability and generalizability across different data subsets.
-- Performance of Sequential Neural Network: the Sequential Neural Network demonstrated good performance with no significant overfitting as evidenced by the training and validation loss curves. Model accuracy reached nearly 90%, with a small gap between the training and validation loss, suggesting minimal overfitting and efficient learning.
+- Random Forest showed a good balance between accuracy and interpretability. Bootstrapping results showed accuracy between 91%-92%, with a low standard deviation of 1.36%, indicating strong stability and generalization across different subsets of the data.
+- Sequential Neural Network: Demonstrated minimal overfitting, with training and validation loss curves showing small gaps, suggesting efficient learning from the data. The model’s accuracy reached almost 90%, demonstrating its potential, but it still did not match the performance of the other two models.
 
-### Supplementary Results - Parameter Choices
+### Supplementary Results 
 
-XGBoost and Random Forest: Tuned using Random Search (XGBoost) and Grid Search (Random Forest) to optimize hyperparameters, including:
-- Learning rate
-- Number of estimators
-- Maximum depth
-- Subsample rate
+#### Parameter Choices:
+- XGBoost and Random Forest were both fine-tuned using Grid Search (Random Forest) and Random Search (XGBoost) for hyperparameter optimization. Key parameters like learning rate, number of estimators, tree depth, and subsample rate were adjusted to achieve the best performance.
+- The Sequential Neural Network utilized a batch size of 50 and 64 epochs. The Adam optimizer was employed to adjust the learning rate, and early stopping was applied to prevent overfitting during training.
 
-Sequential Neural Network:
-- Batch size: 50
-- Epochs: 64
-- Optimizer: Adam, with early stopping to prevent overfitting
+#### Feature Engineering:
+- Key features such as follower count, post count, profile picture presence, and username length were identified and utilized as essential predictors for distinguishing fake accounts from genuine ones. These features had a significant impact on model performance, enabling better classification of Instagram accounts.
 
-Feature Engineering: focused on the following key attributes to enhance model performance:
-- Follower count
-- Post count
-- Profile picture presence
-- Username length
+#### Model Performance:
+The performance of Random Forest and XGBoost was competitive in terms of accuracy and precision, with Random Forest standing out due to its interpretability. Sequential Neural Networks were chosen for their ability to capture non-linear relationships but showed slightly lower accuracy compared to the tree-based models. However, they remain valuable for tasks that involve more complex and high-dimensional data.
 
 ## Discussion
 We focused on Random Forest and Sequential Neural Networks not only for their strong performance but also for the insights they provide. Random Forest helps us understand which features distinguish fake from real accounts, while the Sequential Neural Network can model deeper, non-linear relationships, making it suitable for more complex data in the future. These models offer a strong foundation for future improvements, despite the current dataset's size limitations.
