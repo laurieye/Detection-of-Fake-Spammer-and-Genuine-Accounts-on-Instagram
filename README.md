@@ -33,6 +33,7 @@ The dataset used in this project contains 696 Instagram accounts with various fe
 The data is divided into 50% fake and 50% real accounts, providing a balanced dataset to build and evaluate our models.
 
 ## Setup
+![Model Development](model_development.png)
 The project explored various machine learning models, focusing on the best-performing models for detecting Instagram fake accounts. We tested Logistic Regression (LR), Tree-based models like Decision Trees and Random Forests, and advanced techniques like Gradient Boosting, XGBoost, Support Vector Machines (SVM), and Sequential Neural Networks (RNN).
 
 ### **Regression-based Models: Logistic Regression** (baseline)
