@@ -1,4 +1,5 @@
 # Instagram Fake Account Detection with Machine Learning
+![ins](ins.webp)
 
 ## Abstract 
 The rise of social media platforms like Instagram has led to an increase in fake accounts, distorting engagement metrics and spreading misinformation. This project develops a machine learning model to classify Instagram accounts as genuine or spam, improving online interaction reliability and social media analytics. We tested various models, including Logistic Regression, Random Forest, XGBoost, and Sequential Neural Networks. XGBoost performed best with 94% accuracy, followed by Random Forest at 92.5%, which offered strong interpretability. The Sequential Neural Network showed potential at 89%, while Logistic Regression provided insights with 92% accuracy. Random Forest demonstrated stability with bootstrapping, achieving 91%-92% accuracy. Key features for distinguishing fake and genuine accounts included follower count, post count, and username characteristics. Despite a small dataset, this work establishes a solid foundation for scalable spam detection, with future improvements focusing on additional features and larger datasets.
