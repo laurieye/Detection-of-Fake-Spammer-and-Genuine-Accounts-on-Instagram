@@ -37,23 +37,39 @@ The data is divided into 50% fake and 50% real accounts, providing a balanced da
 ![Model Development](model_development.png)
 The project explored various machine learning models, focusing on the best-performing models for detecting Instagram fake accounts. We tested Logistic Regression (LR), Tree-based models like Decision Trees and Random Forests, and advanced techniques like Gradient Boosting, XGBoost, Support Vector Machines (SVM), and Sequential Neural Networks (RNN).
 
-### **Regression-based Models: Logistic Regression** (baseline)
-We used default settings for LR as the baseline and fine-tuned the model with L1, L2, and Elastic Net regularizations using randomized search with 5-fold cross-validation. Only the best-performing LR model was included in the final evaluation.
+### Experimental Setup
+In our experiments, we implemented and tested several machine learning models to classify Instagram accounts as either fake or genuine. The models tested included:
 
-### **Tree-based Models: Decision Tree and Random Forest** (with Grid Search for hyperparameter tuning)
-Decision Trees and Random Forest models were initialized with default settings. For tree pruning, Decision Trees were tuned using randomized search CV with 5-fold and cost complexity pruning, while Random Forests used both grid search CV and randomized search CV for hyperparameter tuning. Random Forests showed competitive performance and were included in the final model evaluation.
+- Logistic Regression (baseline model)
+- Tree-based Models: Decision Tree and Random Forest
+- Boosting-based Models: Gradient Boosting and XGBoost
+- Advanced Non-Linear Models: Support Vector Machine (SVM) and Sequential Neural Network (RNN)
 
+For each model, we employed cross-validation and used different hyperparameter tuning strategies such as Grid Search and Random Search to find the optimal parameters (Hyperparameter Tuning):
 
-### **Boosting-based Models: Gradient Boosting and XGBoost** (with Random Search for hyperparameter tuning)
-Both Gradient Boosting and XGBoost models were set with default settings. Hyperparameters were fine-tuned using a 3-fold grid search and randomized search CV, leading to competitive results. XGBoost performed well in terms of accuracy but didn't provide as clear insights into feature importance as Random Forest.
+- Logistic Regression: Fine-tuned using L1, L2, and Elastic Net regularizations via randomized search with 5-fold cross-validation.
+- Tree-based Models (Decision Trees and Random Forest): Tuned using randomized search and grid search with 5-fold cross-validation.
+- Gradient Boosting and XGBoost: Fine-tuned using 3-fold grid search and randomized search CV.
+- Sequential Neural Network: Tuned using a batch size of 50 and 64 epochs, with Adam optimizer and early stopping to prevent overfitting.
 
-### **Advanced Non-linear Models: SVM and Sequential Neural Network** (designed for complex data patterns)
-For SVM and Sequential Neural Networks, the baseline configurations were used with tuning of hyperparameters such as regularization (L2), dropout, and learning rates. These models demonstrated potential for capturing non-linear patterns but were not the best-performing models.
+#### Computing Environment
+The models were executed in Google Colab for ease of use, access to GPU acceleration, and integration with Python libraries such as scikit-learn, XGBoost, and TensorFlow for building the models.
 
-### Key Techniques:
-- **Feature Engineering**: Focused on features such as followers count, posts count, and username length.
-- **Hyperparameter Tuning**: Both Grid Search and Random Search are employed for tuning the models.
-- **Cross-validation**: Used to ensure model robustness and prevent overfitting.
+- Hardware: Google Colab's GPU was used for training the models, especially for the Sequential Neural Network.
+- Software: The primary libraries used were:
+scikit-learn for traditional machine learning models (Logistic Regression, Decision Trees, Random Forests, SVM)
+XGBoost for the boosting-based models
+TensorFlow (via Keras) for the Sequential Neural Network
+
+#### Problem Setup
+The goal of this project was to classify Instagram accounts into two categories: genuine or fake. This is a binary classification problem, where the machine learning models predict whether an account is fake based on several input features.
+
+For the Sequential Neural Network (Network Structure):
+
+- Input Layer: Accepts features such as followers count, post count, profile picture presence, and username length.
+- Hidden Layers: Two hidden layers with 64 units and 32 units, respectively, using ReLU activation and L2 regularization.
+- Output Layer: A sigmoid activation to predict a probability between 0 and 1, indicating whether the account is fake or genuine.
+- This setup helps capture non-linear relationships in the data and classify Instagram accounts based on complex patterns.
 
 ## Evaluation
 The models are evaluated using the following metrics:
