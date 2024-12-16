@@ -24,6 +24,7 @@ We used models like Random Forest, XGBoost, and Sequential Neural Networks, each
 Our approach differs from traditional methods by adapting to new data patterns, improving classification over time. While Random Forest and XGBoost performed best, future work will focus on expanding the dataset and incorporating more features for better scalability and robustness.
 
 ## Dataset 
+![Data](data_stats.png)
 The dataset used in this project contains 696 Instagram accounts with various features such as:
 
 - Number of followers
