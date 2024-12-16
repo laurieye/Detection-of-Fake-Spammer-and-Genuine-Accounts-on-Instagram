@@ -1,4 +1,4 @@
-# Instagram Fake Account Detection with Machine Learning
+# Instagram Fake Account Detection 
 ![ins](ins.webp)
 
 ## Abstract 
