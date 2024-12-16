@@ -1,4 +1,4 @@
-# Instagram Fake Account Detection 
+# Instagram Fake Account Detection Models
 ![ins](ins.webp)
 
 ## Abstract 
